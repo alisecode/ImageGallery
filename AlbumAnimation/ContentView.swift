@@ -44,6 +44,12 @@ struct ContentView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
+                    
+                    Text("Album")
+                        .font(.system(size: 20, weight: .medium))
+                        .foregroundStyle(.secondary)
+                    Text("Movie Night")
+                        .font(.system(size: 32, weight: .bold))
                     let maxWidth = (proxy.size.width - 6) / 2
                     LazyVGrid(columns: [
                         GridItem(.flexible(minimum: maxWidth)),
@@ -69,8 +75,6 @@ struct ContentView: View {
             .padding(.top, proxy.safeAreaInsets.top)
             .scrollIndicators(.hidden)
             .ignoresSafeArea()
-            .navigationTitle("Movie Night")
-            .navigationBarTitleDisplayMode(.large)
             .overlay {
                 if preview, let selected = selected {
                     
@@ -120,7 +124,5 @@ extension ContentView {
 }
 
 #Preview {
-    NavigationStack {
-        ContentView()
-    }
+    ContentView()
 }

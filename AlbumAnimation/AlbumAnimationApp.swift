@@ -11,12 +11,7 @@ import SwiftUI
 struct AlbumAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                ContentView()
-                    .navigationTitle("Movie Night")
-                    .navigationBarTitleDisplayMode(.automatic)
-            }
-            
+            ContentView()
         }
     }
 }
