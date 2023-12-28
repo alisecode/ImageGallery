@@ -2,7 +2,7 @@
 //  AlbumAnimationApp.swift
 //  AlbumAnimation
 //
-//  Created by Алиса Третьякова on 26.12.2023.
+//  Created by Alisa Serhiienko on 26.12.2023.
 //
 
 import SwiftUI
@@ -11,7 +11,12 @@ import SwiftUI
 struct AlbumAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+                    .navigationTitle("Movie Night")
+                    .navigationBarTitleDisplayMode(.automatic)
+            }
+            
         }
     }
 }
