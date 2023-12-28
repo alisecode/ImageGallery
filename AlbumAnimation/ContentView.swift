@@ -45,11 +45,15 @@ struct ContentView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     
-                    Text("Album")
-                        .font(.system(size: 20, weight: .medium))
-                        .foregroundStyle(.secondary)
-                    Text("Movie Night")
-                        .font(.system(size: 32, weight: .bold))
+                    Group {
+                        Text("Album")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundStyle(.secondary)
+                        Text("Movie Night")
+                            .font(.system(size: 32, weight: .bold))
+                    }
+                    .padding(.horizontal, 16)
+                   
                     let maxWidth = (proxy.size.width - 6) / 2
                     LazyVGrid(columns: [
                         GridItem(.flexible(minimum: maxWidth)),
